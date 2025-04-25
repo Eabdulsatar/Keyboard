@@ -83,7 +83,7 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <5 6>;
         };
-azssdsdsdsdsdsdsd
+
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <17 18>;
