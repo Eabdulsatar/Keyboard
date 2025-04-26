@@ -31,7 +31,7 @@
         sp_under : shift_space_makes_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp UNDER_SCORE>;
+            bindings = <&kp SPACE>, <&kp UNDERSCORE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
