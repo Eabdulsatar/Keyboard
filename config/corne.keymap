@@ -31,7 +31,7 @@
         space_with_shift: space_with_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp UNDER_SCORE>;
+            bindings = <&kp SPACE &kp UNDER_SCORE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
