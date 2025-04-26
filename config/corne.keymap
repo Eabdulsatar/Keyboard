@@ -28,7 +28,7 @@
             global-quick-tap;
         };
 
-        sp_under : shift_space_makes_under {
+        spund : space_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDERSCORE>;
@@ -112,7 +112,7 @@
 &gresc      &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &kp BSPC
 &kp TAB     &hm LEFT_GUI A    &hm LEFT_ALT S   &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H      &hm RSHIFT J      &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
 &kp LSHIFT  &kp Z             &kp X            &kp C        &kp V             &kp B        &kp N      &kp M             &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                               &kp LALT     &kp LGUI          &kp LCTRL               &sp_under         &to NUMPAD     &mo NUMPAD
+                                               &kp LALT     &kp LGUI          &kp LCTRL               &spund            &to NUMPAD     &mo NUMPAD
             >;
         };
 
