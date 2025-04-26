@@ -28,11 +28,11 @@
             global-quick-tap;
         };
 
-        spund : space_under {
+        spund: space_under {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDERSCORE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
 
         gresc: grave_escape {
