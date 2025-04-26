@@ -28,6 +28,13 @@
             global-quick-tap;
         };
 
+        space_with_shift: space_with_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp UNDER_SCORE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
@@ -98,7 +105,7 @@
 &kp ESC     &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &kp BSPC
 &kp TAB     &hm LEFT_GUI A    &hm LEFT_ALT S   &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H      &hm RSHIFT J      &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
 &kp LSHIFT  &kp Z             &kp X            &kp C        &kp V             &kp B        &kp N      &kp M             &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                               &kp TAB      &kp LCTRL         &kp LGUI     &kp SPACE  &to NUMPAD        &kp UNDER
+                                               &kp LALT     &kp LGUI          &kp LCTRL               &space_with_shift                &kp UNDER         &to NUMPAD
             >;
         };
 
