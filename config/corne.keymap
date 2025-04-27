@@ -32,7 +32,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp UNDERSCORE>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        bckdl: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         gresc: grave_escape {
@@ -109,7 +116,7 @@
 
         CHAR {
             bindings = <
-&gresc      &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &kp BSPC
+&gresc      &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &bckdl
 &kp TAB     &hm LEFT_GUI A    &hm LEFT_ALT S   &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H      &hm RSHIFT J      &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
 &kp LSHIFT  &kp Z             &kp X            &kp C        &kp V             &kp B        &kp N      &kp M             &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
                                                &kp LALT     &kp LGUI          &kp LCTRL               &spund            &to NUMPAD     &mo ARROWS
@@ -118,7 +125,7 @@
 
         NUM {
             bindings = <
-&trans  &kp N1  &kp N2   &kp N3  &kp N4  &kp N5   &kp N6   &kp N7     &kp N8     &kp N9  &kp N0   &kp BSPC
+&trans  &kp N1  &kp N2   &kp N3  &kp N4  &kp N5   &kp N6   &kp N7     &kp N8     &kp N9  &kp N0   &kp &trans
 &trans  &rgb_ug RGB_TOG  &trans  &trans  &trans   &kp F12  &kp MINUS  &kp EQUAL  &kp GRAVE  &trans  &kp SQT  &trans
 &trans  &trans  &trans   &trans  &trans  &trans   &trans   &trans     &trans     &trans  &trans   &trans
                              &trans  &to CHARS  &trans   &trans     &kp RIGHT_SHIFT  &trans
