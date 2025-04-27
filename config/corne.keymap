@@ -127,8 +127,8 @@
 
         ARR {
             bindings = <
-&trans  &kp N_7  &kp N_8  &kp N_9  &kp N_0  &kp HOME  &trans &trans &trans    &kp UP    &trans     &trans
-&trans  &kp N4  &kp N_5  &kp N_6  &kp KP_PLUS           &kp END &trans &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans  &kp N7  &kp N8  &kp N9  &kp N0  &kp HOME  &trans &trans &trans    &kp UP    &trans     &trans
+&trans  &kp N4  &kp N5  &kp N6  &kp KP_PLUS           &kp END &trans &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp KP_MINUS          &trans &trans &trans   &trans    &trans    &trans     &trans 
                                      &trans           &trans           &trans           &trans    &trans    &trans
             >;
