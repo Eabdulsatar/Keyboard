@@ -178,10 +178,10 @@
 
         BT {
             bindings = <
-&bt BT_CLR  &none  &none  &none    &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
-&none       &none  &none  &none    &none  &none          &none         &none         &none         &none         &none  &none
-&none       &none  &none  &none    &none  &none          &none         &none         &none         &none         &none  &none
-                          &to NUM  &none  &to CHARS      &to CHARS     &none         &none
+&bt BT_CLR  &none  &none  &none       &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
+&none       &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
+&none       &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
+                          &to NUMPAD  &none  &to CHARS      &to CHARS     &none         &none
             >;
         };
         extra1 {
