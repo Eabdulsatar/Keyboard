@@ -13,6 +13,7 @@
 #define CHARS 0
 #define NUMPAD 1
 #define ARROWS 2
+#define BLUETOOTH 3
 / {
     behaviors {
         hm: homerow_mods {
@@ -122,10 +123,21 @@
             timeout-ms = <50>;
         };
 
+        dash {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+            timeout-ms = <50>;
+        };
+
         eql {
             bindings = <&kp EQUAL>;
             key-positions = <9 10>;
         };
+
+        amp{
+            bindings = <&kp AMPS>;
+            key-positions = <22 23>;
+        }
 
 
     };
@@ -138,34 +150,34 @@
 &gresc      &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &bckdl
 &kp TAB     &hm LEFT_GUI A    &hm LEFT_ALT S   &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H      &hm RSHIFT J      &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
 &kp LSHIFT  &kp Z             &kp X            &kp C        &kp V             &kp B        &kp N      &kp M             &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                               &kp LALT     &kp LGUI          &kp LCTRL               &spund            &to NUMPAD     &mo ARROWS
+                                               &kp LALT     &kp LCTRL         &kp LGUI                &spund            &mo ARROWS     &to NUM
             >;
         };
 
         NUM {
             bindings = <
-&trans  &kp N1  &kp N2   &kp N3  &kp N4  &kp N5   &kp N6   &kp N7     &kp N8     &kp N9  &kp N0   &kp &trans
-&trans  &rgb_ug RGB_TOG  &trans  &trans  &trans   &kp F12  &kp MINUS  &kp EQUAL  &kp GRAVE  &trans  &kp SQT  &trans
-&trans  &trans  &trans   &trans  &trans  &trans   &trans   &trans     &trans     &trans  &trans   &trans
-                             &trans  &to CHARS  &trans   &trans     &kp RIGHT_SHIFT  &trans
+&gresc      &kp N1  &kp N2   &kp N3    &kp N4  &kp N5   &kp N6   &kp N7     &kp N8     &kp N9  &kp N0   &kp &trans
+&kp TAB     &rgb_ug RGB_TOG  &trans    &trans  &trans   &kp F12  &kp MINUS  &kp EQUAL  &kp GRAVE  &trans  &kp SQT  &trans
+&kp LSHIFT  &trans  &trans   &trans    &trans  &trans   &trans   &trans     &trans     &trans  &trans   &trans
+                             &to CHARS &trans  &trans            &trans     &kp RIGHT_SHIFT  &to BLUETOOTH
             >;
         };
 
         ARR {
             bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &kp N0  &kp PERCENT  &trans &trans &trans    &kp UP    &trans     &trans
-&trans  &kp N4  &kp N5  &kp N6  &kp KP_PLUS           &kp END &trans &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp KP_MINUS          &trans &trans &trans   &trans    &trans    &trans     &trans 
-                                     &trans           &trans           &trans           &trans    &trans    &trans
+&gresc      &trans  &kp N7  &kp N8    &kp N9    &kp PERCENT         &trans    &trans    &kp UP    &trans     &trans &bckdl
+&kp TAB     &trans  &kp N4  &kp N5    &kp N6    &kp KP_PLUS         &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans &SQT
+&kp LSHIFT  &trans  &kp N1  &kp N2    &kp N3    &kp KP_MINUS        &trans    &trans    &trans    &trans     &trans &ENTER
+                            &none     &kp n0    &spund              &spund    &none     &none
             >;
         };
 
         BT {
             bindings = <
-&bt BT_SEL 0  &trans        &trans &trans &trans  &trans &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans  &trans
-&trans        &bt BT_CLR    &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans  &trans  &trans  &trans
+&bt BT_CLR  &none  &none  &none    &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
+&none       &none  &none  &none    &none  &none          &none         &none         &none         &none         &none  &none
+&none       &none  &none  &none    &none  &none          &none         &none         &none         &none         &none  &none
+                          &to NUM  &none  &to CHARS      &to CHARS     &none         &none
             >;
         };
         extra1 {
