@@ -109,6 +109,23 @@
             bindings = <&kp PIPE>;
             key-positions = <17 18>;
         };
+
+        excl {
+            bindings = <&kp EXCL>;
+            key-positions = <1,2>;
+        };
+
+        quot {
+            bindings = <&kp DQT>;
+            key-positions = <2,3>;
+        };
+
+        eql {
+            bindings = <&kp EQUAL>;
+            key-positions = <9,10>;
+        };
+
+
     };
 
     keymap {
@@ -134,7 +151,7 @@
 
         ARR {
             bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &kp N0  &kp HOME  &trans &trans &trans    &kp UP    &trans     &trans
+&trans  &kp N7  &kp N8  &kp N9  &kp N0  &kp PERCENT  &trans &trans &trans    &kp UP    &trans     &trans
 &trans  &kp N4  &kp N5  &kp N6  &kp KP_PLUS           &kp END &trans &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp KP_MINUS          &trans &trans &trans   &trans    &trans    &trans     &trans 
                                      &trans           &trans           &trans           &trans    &trans    &trans
