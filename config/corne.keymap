@@ -166,7 +166,7 @@
         ARR {
             bindings = <
 &gresc      &trans  &kp N7  &kp N8    &kp N9    &kp PERCENT         &trans    &trans    &kp UP    &trans     &trans &bckdl
-&kp TAB     &trans  &kp N4  &kp N5    &kp N6    &kp KP_PLUS         &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans &SQT
+&kp TAB     &trans  &kp N4  &kp N5    &kp N6    &kp KP_PLUS         &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans &kp SQT
 &kp LSHIFT  &trans  &kp N1  &kp N2    &kp N3    &kp KP_MINUS        &trans    &trans    &trans    &trans     &trans &ENTER
                             &none     &kp n0    &spund              &spund    &none     &none
             >;
