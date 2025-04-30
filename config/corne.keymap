@@ -11,9 +11,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define CHARS 0
-#define NUMPAD 1
-#define ARROWS 2
-#define BLUETOOTH 3
+#define ARROWS 1
+#define BLUETOOTH 2
 / {
     behaviors {
         hm: homerow_mods {
@@ -154,34 +153,25 @@
 &gresc      &kp Q             &kp W            &kp E        &kp R             &kp T        &kp Y      &kp U             &kp I          &kp O            &kp P               &bckdl
 &kp TAB     &hm LEFT_GUI A    &hm LEFT_ALT S   &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H      &hm RSHIFT J      &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
 &kp LSHIFT  &kp Z             &kp X            &kp C        &kp V             &kp B        &kp N      &kp M             &kp COMMA      &kp DOT          &kp FSLH            &kp ENTER
-                                               &kp LALT     &kp LCTRL         &kp LGUI                &spund            &mo ARROWS     &to NUMPAD
-            >;
-        };
-
-        NUM {
-            bindings = <
-&gresc      &kp N1  &kp N2   &kp N3    &kp N4  &kp N5   &kp N6   &kp N7     &kp N8     &kp N9  &kp N0   &kp &bckdl
-&kp TAB     &none   &none    &none     &none   &none    &none    &none      &none      &none   &none    &kp SQT
-&kp LSHIFT  &none   &none    &none     &none   &none    &none    &none      &none      &none   &none    &kp ENTER
-                             &to CHARS &none   &none             &none      &none      &to BLUETOOTH
+                                               &kp LALT     &kp LCTRL         &kp LGUI                &spund            &mo ARROWS     &mo BT
             >;
         };
 
         ARR {
             bindings = <
-&bckdl      &none  &kp N7  &kp N8    &kp N9    &kp PERCENT         &kp F12  &none     &kp UP    &none      &none &bckdl
-&kp TAB     &none  &kp N4  &kp N5    &kp N6    &kp KP_PLUS         &none    &kp LEFT  &kp DOWN  &kp RIGHT  &none &kp SQT
-&kp LSHIFT  &none  &kp N1  &kp N2    &kp N3    &kp KP_MINUS        &none    &none     &none     &none      &none &kp ENTER
-                            &none     &kp N0    &spund              &spund    &none     &none
+&bckdl      &none  &kp N7  &kp N8    &kp N9    &kp PERCENT         &kp F12  &none     &kp UP     &none      &kp F5    &bckdl
+&kp TAB     &none  &kp N4  &kp N5    &kp N6    &kp KP_PLUS         &none    &kp LEFT  &kp DOWN   &kp RIGHT  &SEMI     &kp SQT
+&kp LSHIFT  &none  &kp N1  &kp N2    &kp N3    &kp KP_MINUS        &none    &none     &kp COMMA  &kp DOT    &kp FLSH  &kp ENTER
+                           &kp LALT  &kp N0    &spund             &spund    &none     &kp LGUI
             >;
         };
 
         BT {
             bindings = <
-&bt BT_CLR  &none  &none  &none       &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
-&none       &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
-&none       &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
-                          &to NUMPAD  &none  &to CHARS      &to CHARS     &none         &none
+&none  &none  &none  &none       &none  &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &bt BT_CLR
+&none  &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
+&none  &none  &none  &none       &none  &none          &none         &none         &none         &none         &none  &none
+                     &none       &none  &none          &none         &none         &none
             >;
         };
         extra1 {
