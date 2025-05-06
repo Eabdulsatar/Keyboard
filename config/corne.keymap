@@ -63,8 +63,8 @@
         shfcaps: shift_capslock_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <75>;
-            bindings = <&kp LSHIFT>, <&kp LSHIFT>, <&kp CAPS>;
+            tapping-term-ms = <100>;
+            bindings = <&kp LSHIFT>, <&kp CAPS>;
         }
     };
 
