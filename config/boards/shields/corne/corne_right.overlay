@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "corne.dtsi"
+#include "corne_right.dtsi"
 
 &default_transform {
 	col-offset = <6>;
@@ -19,8 +19,6 @@
         , <&pro_micro 20  GPIO_ACTIVE_HIGH>
         , <&pro_micro 21  GPIO_ACTIVE_HIGH>
         ;
-    row-gpios = <
-        &pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)  // New Row 1 (P0.14)
     >;
 };
 / {
