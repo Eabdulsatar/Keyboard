@@ -81,7 +81,7 @@
 &ext_power EP_TOG  &none   &none   &none   &none   &none    &none   &none            &none             &kp APOS        &kp TILDE        &none
                                    &none   &none   &none    &none   &kp RIGHT_SHIFT  &none
             >;
-            sensor-bindings = <&rgb_ug RGB_COLOR_HSV_RED>;
+        sensor-bindings = <&rgb_ug RGB_COLOR_HSV(0, 100, 100)>;      
         };
 
         raise_layer {
