@@ -61,6 +61,22 @@
             key-positions = <17 18>;
         };
     };
+    behaviors {
+        rgb_ug: rgb_ug {
+            compatible = "zmk,behavior-rgb-underglow";
+            #binding-cells = <0>;
+        };
+    };
+
+    layer_indicator {
+        compatible = "zmk,layer-indicator";
+        layer-colors = <
+            RGB_COLOR_HSV(0, 0, 0)      // Default layer (off)
+            RGB_COLOR_HSV(0, 100, 100)  // Lower layer (red)
+            RGB_COLOR_HSV(120, 100, 50) // Raise layer (green)
+            RGB_COLOR_HSV(240, 100, 50) // Layer 3 (blue)
+        >;
+    };
 
     keymap {
         compatible = "zmk,keymap";
