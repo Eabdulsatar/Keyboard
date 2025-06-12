@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -102,10 +103,10 @@
 
         raise_layer {
             bindings = <
-&trans          &kp APOS       &kp EXCLAMATION  &kp AT_SIGN           &kp DOLLAR             &kp PERCENT  &kp HOME  &kp END         &kp PRINTSCREEN  &trans     &trans  &trans
-&kp LEFT_SHIFT  &kp AMPERSAND  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &trans  &trans
-&trans          &kp DELETE     &kp KP_NUMBER_1  &kp KP_NUMBER_2       &kp KP_NUMBER_3        &kp PLUS     &trans    &trans          &trans           &trans     &trans  &trans
-                                                &trans                &trans                 &trans       &trans    &trans          &trans
+&trans          &kp APOS       &kp EXCLAMATION  &kp AT_SIGN           &kp DOLLAR             &kp PERCENT  &kp HOME        &mkp LCLK       &mkp RCLK     &kp END          &trans  &trans
+&kp LEFT_SHIFT  &kp AMPERSAND  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans          &kp DELETE     &kp KP_NUMBER_1  &kp KP_NUMBER_2       &kp KP_NUMBER_3        &kp PLUS     &trans          &trans          &trans        &trans           &trans  &trans
+                                                &trans                &trans                 &trans       &trans          &trans          &trans
             >;
         };
 
