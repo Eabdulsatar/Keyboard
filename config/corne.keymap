@@ -44,7 +44,6 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-};
     };
 
     layer_indicator {
