@@ -7,11 +7,7 @@
 #include "corne.dtsi"
 
 
-//added
-&rgb_underglow {
-    status = "okay";
-};
-//added
+
 
 &kscan0 {
     col-gpios
