@@ -10,6 +10,27 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
 / {
+
+//added
+    chosen {
+        zmk,underglow = &underglow;
+    };
+
+    underglow: underglow {
+        compatible = "zmk,underglow-ext";
+        status = "okay";
+        speed = <10>;
+        hue-step = <10>;
+        sat-step = <10>;
+        brt-step = <10>;
+        ext-power-enable;
+        ext-power-gpio = <&gpio0 26 GPIO_ACTIVE_HIGH>;
+        underglow-default-mode = <RGB_RAINBOW_SWIRL>;
+        underglow-default-hue = <100>;
+        underglow-default-sat = <100>;
+        underglow-default-brt = <50>;
+    };
+//added
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
