@@ -6,11 +6,6 @@
 
 #include "corne.dtsi"
 
-//added
-&rgb_underglow {
-    status = "okay";
-};
-//added
 
 
 &default_transform {
