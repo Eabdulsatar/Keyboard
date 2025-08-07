@@ -12,6 +12,8 @@
     chain-length = <21>;
 };
 
+CONFIG_ZMK_RGB_UNDERGLOW=y;
+
 / {
         keymap {
                 compatible = "zmk,keymap";
