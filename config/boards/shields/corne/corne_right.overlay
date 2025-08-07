@@ -6,6 +6,16 @@
 
 #include "corne.dtsi"
 
+//added
+&rgb_underglow {
+    status = "okay";
+    color = <255 255 255>;     // White color for testing (R G B)
+    effect = "static";         // Static effect to keep the color on
+    brightness = <255>;        // Max brightness
+};
+//added
+
+
 &default_transform {
 	col-offset = <6>;
 };
