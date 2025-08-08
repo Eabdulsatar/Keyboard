@@ -9,11 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/ext_power.h>
-/ {
 
-   &led_strip {
+ &led_strip {
         chain-length = <36>;
     };
+
+/ {
+
+  
 
     behaviors {
         hm: homerow_mods {
