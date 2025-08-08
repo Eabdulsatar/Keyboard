@@ -11,6 +11,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 / {
 
+   &led_strip {
+        chain-length = <36>;
+    };
 
     behaviors {
         hm: homerow_mods {
