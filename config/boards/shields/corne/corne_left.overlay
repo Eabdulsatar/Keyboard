@@ -6,7 +6,7 @@
 
 #include "corne.dtsi"
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/kscan_mocks.h>
+
 
 
 
@@ -21,7 +21,19 @@
 		, <&pro_micro 14 GPIO_ACTIVE_HIGH>
 		;
 };
+
 / {
+    led_strip: led_strip {
+        compatible = "ws2812-gpio";
+        chain-length = <36>;
+        color-mapping = <WS2812_COLOR_ORDER_GRB>;
+        gpios = <&pro_micro P0_29 (GPIO_ACTIVE_HIGH)>;
+    };
+};
+
+
+/*
+{
     chosen {
       zmk,battery = &vbatt;
     };
@@ -30,10 +42,4 @@
         compatible = "zmk,battery-nrf-vddh";
     };
 };
-
-&led_strip {
-    compatible = "ws2812-gpio";
-    chain-length = <36>;
-    color-mapping = <WS2812_COLOR_ORDER_GRB>;
-    gpios = <&pro_micro P0_29 (GPIO_ACTIVE_HIGH)>;
-};
+*/
