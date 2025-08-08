@@ -5,20 +5,10 @@
  */
 
 #include "corne.dtsi"
-#include "sofle_rgb.dtsi"
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/kscan_mocks.h>
 
-&led_strip {
-    compatible = "ws2812-gpio";
-    chain-length = <36>;
-    color-mapping = <WS2812_COLOR_ORDER_GRB>;
-    /*
-     * The pin might be different depending on your build.
-     * Check your specific Sofle RGB schematic.
-     * For example, it might be connected to a GPIO pin like D3 (p0.29).
-     */
-    // gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH)>; // Example for Pro Micro
-    gpios = <&pro_micro P0_29 (GPIO_ACTIVE_HIGH)>; // Example for Nice!Nano
-};
+
 
 
 &kscan0 {
@@ -39,4 +29,11 @@
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
     };
+};
+
+&led_strip {
+    compatible = "ws2812-gpio";
+    chain-length = <36>;
+    color-mapping = <WS2812_COLOR_ORDER_GRB>;
+    gpios = <&pro_micro P0_29 (GPIO_ACTIVE_HIGH)>;
 };
