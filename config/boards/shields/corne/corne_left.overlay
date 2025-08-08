@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2020 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "corne.dtsi"
 #include <dt-bindings/zmk/rgb.h>
 
@@ -12,6 +6,6 @@
         compatible = "ws2812-gpio";
         chain-length = <36>;
         color-mapping = <WS2812_COLOR_ORDER_GRB>;
-        gpios = <&pro_micro P0_29 (GPIO_ACTIVE_HIGH)>;
+        gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;
     };
 };
